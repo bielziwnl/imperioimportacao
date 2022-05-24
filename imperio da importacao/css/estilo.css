@@ -1,0 +1,201 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#pagamentos {
+  box-shadow: 1px 1px 2px #ffcf3e, 0 0 25px #FFC107, 0 0 5px #f1b500;
+  background: #FFC107;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+
+#nav {
+  background: rgb(33, 36, 37);
+
+  background: linear-gradient(90deg, rgb(37, 40, 41) 0%, rgb(32, 34, 34) 36%, rgb(0, 0, 0) 100%); /* mudar cor de fundo */
+
+}
+
+.nav-link {
+ color: #fff !important; /* mudar cor do texto */
+}
+
+
+h3 { text-decoration: none;}
+
+/* Carousel base - Chris Neale @onion2k */
+
+#produtos {
+    height: 600px;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 500px 100px;
+    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  main#carousel {
+    grid-row: 1 / 2;
+    grid-column: 1 / 8;
+    width: 80vw;
+    height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 600px;
+    --items: 5;
+    --middle: 3;
+    --position: 1;
+    /* pointer-events: none; com isso ligado não é permitido href ou interação com o carousel */
+  }
+
+
+  
+  div.item {
+    position: absolute;
+    width: 300px;
+    height: 600px;
+    background-color: coral;
+    --r: calc(var(--position) - var(--offset));
+    --abs: max(calc(var(--r) * -1), var(--r));
+    transition: all 0.25s linear;
+    transform: rotateY(calc(-10deg * var(--r)))
+      translateX(calc(-300px * var(--r)));
+    z-index: calc((var(--position) - var(--abs)));
+    text-align: center;
+  
+}
+  
+  div.item:nth-of-type(1) {
+    --offset: 1;
+    background-color: transparent;
+  }
+  div.item:nth-of-type(2) {
+    --offset: 2;
+    background-color: transparent;
+  }
+  div.item:nth-of-type(3) {
+    --offset: 3;
+    background-color: transparent;
+  }
+  div.item:nth-of-type(4) {
+    --offset: 4;
+    background-color: transparent;
+  }
+  div.item:nth-of-type(5) {
+    --offset: 5;
+    background-color: transparent;
+  }
+  
+  input:nth-of-type(1) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(1):checked ~ main#carousel {
+    --position: 1;
+  }
+  
+  input:nth-of-type(2) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(2):checked ~ main#carousel {
+    --position: 2;
+  }
+  
+  input:nth-of-type(3) {
+    grid-column: 4 /5;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(3):checked ~ main#carousel {
+    --position: 3;
+  }
+  
+  input:nth-of-type(4) {
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(4):checked ~ main#carousel {
+    --position: 4;
+  }
+  
+  input:nth-of-type(5) {
+    grid-column: 6 / 7;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(5):checked ~ main#carousel {
+    --position: 5;
+  }
+
+  #botao /* do carousel */ { 
+    text-decoration: none;
+    color: white;
+}
+  
+  /* Carousel Chris Neale @onion2k End*/
+
+  #imgB {
+
+    pointer-events: none
+  
+  } /* Frete e parcelamento */
+
+
+  /* DarkCode @darkcodeonline */
+  
+  .gotopbtn {
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      background: #FFC107;
+      bottom: 40px;
+      right: 50px;
+      text-decoration: none;
+      text-align: center;
+      line-height: 38px;
+      color: white;
+      font-size: 22px;
+      border-radius: 30px;
+  }
+   /* DarkCode @darkcodeonline end*/
+
+
+#catalogo {
+  text-align: center;
+}
+
+
+footer{
+  background: rgb(33, 36, 37);
+
+  background: linear-gradient(90deg, rgb(37, 40, 41) 0%, rgb(32, 34, 34) 36%, rgb(0, 0, 0) 100%); /* mudar cor de fundo */
+}
+
+
+
+
+.zoom {
+  transition: transform .2s; /* Animation */
+}
+
+.zoom:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+#Contatos { 
+  text-align: center;
+}
+
+.titulofooter {
+  font-size: 25px;
+  color: white;
+}
+.fontfooter {
+  color: white;
+  font-size: 20px;
+}
